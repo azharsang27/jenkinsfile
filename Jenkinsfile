@@ -46,12 +46,11 @@ pipeline {
 					du -h 
 				   '''				
 				sh '''
-				def br_name = "${params.DENV}"
-				if br_name == "TEST" {
+				if (DENV.equals("TEST")) {
 					echo "TEST ENV DEPLOY"
-				} else if br_name == "QA" {
+				} else if (DENV.equals("QA"))  {
 					echo "QA ENV DEPLOY"
-				} else if br_name == "PROD" {
+				} else if (DENV.equals("PROD"))  {
 					echo "PROD ENV DEPLOY"
 				} else
 					echo "Incorrect ENV"
