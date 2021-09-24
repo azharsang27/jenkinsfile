@@ -45,8 +45,6 @@ pipeline {
 					sleep 5
 					du -h 
 				   '''
-			}
-			steps {
 				def br_name="${params.DENV}"
 				sh '''
 				if br_name == "TEST" {
