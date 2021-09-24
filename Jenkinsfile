@@ -44,13 +44,13 @@ pipeline {
 				sh ''' 
 					sleep 5
 					du -h 
-				if (DENV.equals("TEST")){
+				if (DENV.equals(TEST)){
 					echo "TEST ENV DEPLOY"
 				} 
-				else if (DENV.equals("QA")){
+				else if (DENV.equals(QA)){
 					echo "QA ENV DEPLOY"
 				} 
-				else if (DENV.equals("PROD")){
+				else if (DENV.equals(PROD)){
 					echo "PROD ENV DEPLOY"
 				} 
 				'''
