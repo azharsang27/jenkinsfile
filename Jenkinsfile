@@ -44,9 +44,9 @@ pipeline {
 				sh ''' 
 					sleep 5
 					du -h 
-				   '''
-				def br_name="${params.DENV}"
+				   '''				
 				sh '''
+				def br_name="${params.DENV}"
 				if br_name == "TEST" {
 					echo "TEST ENV DEPLOY"
 				} else if br_name == "QA" {
