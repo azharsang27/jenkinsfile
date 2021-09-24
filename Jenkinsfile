@@ -44,8 +44,6 @@ pipeline {
 				sh ''' 
 					sleep 5
 					du -h 
-				   '''				
-				sh '''
 				if (DENV.equals("TEST")){
 					echo "TEST ENV DEPLOY"
 				} 
